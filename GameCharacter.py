@@ -16,7 +16,7 @@ class GameCharacter(object):
         return (self.isAtLeftEdge() or self.isAtRightEdge())
     
     def isAtLeftEdge(self):
-        return (self.rect.left < 0)
+        return (self.rect.right < 0)
     
     def isAtRightEdge(self):
         return (self.rect.right > self.game.width)
@@ -38,8 +38,6 @@ class GameCharacter(object):
     def setVSpeed(self, verticalSpeed):
         self.setSpeed(None, verticalSpeed, None)
 
-    def setRSpeed(self, rspeed):
-        self.setSpeed(None, None, rspeed)
 
     def setSpeed(self, horizontalSpeed, verticalSpeed, rspeed):
         if(horizontalSpeed):

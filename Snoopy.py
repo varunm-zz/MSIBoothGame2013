@@ -40,16 +40,16 @@ class Snoopy(GameCharacter):
         self.keepFlying()
 
     def keepFlying(self):
-        bob = random.randint(1,3)
+        # bob = random.randint(1,3)
 
-        newRect = self.rect.move([self.hspeed, self.bobbingSpeed])
-        if bob == 3:
-            newRect = self.rect.move([self.hspeed, self.bobbingSpeed])
-            self.bobbingSpeed = -self.bobbingSpeed
-        else:
-            newRect = self.rect.move([self.hspeed,0])
+        # newRect = self.rect.move([self.hspeed, self.bobbingSpeed])
+        # if bob == 3:
+        #     newRect = self.rect.move([self.hspeed, self.bobbingSpeed])
+        #     self.bobbingSpeed = -self.bobbingSpeed
+        # else:
+        #     newRect = self.rect.move([self.hspeed,0])
 
-        self.rect = newRect
+        # self.rect = newRect
 
         if(self.isAtRightEdge() and self.isGoingRight() or self.isAtLeftEdge() and self.isGoingLeft()):
             self.turnAround()
